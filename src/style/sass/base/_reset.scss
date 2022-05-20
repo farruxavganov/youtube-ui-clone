@@ -1,0 +1,37 @@
+@use "../abstracts/varabiles" as var;
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: var.$color-light;
+    overflow-x: hidden
+}
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: .3 ease;
+    &:focus {
+        outline: none;
+    }
+    &:hover > .sub-info {
+        visibility: visible;
+        opacity: 1;
+        width: auto;
+        height: auto;
+    }
+}

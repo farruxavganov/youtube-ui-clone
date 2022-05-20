@@ -1,0 +1,15 @@
+.sub-info {
+    position: absolute;
+    white-space: nowrap;
+    background: #05050573;
+    padding: 10px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    color: #ffff;
+    top: 150%;
+    right: -50%;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}

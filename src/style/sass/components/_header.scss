@@ -1,0 +1,195 @@
+@use "../abstracts/varabiles" as var;
+
+.main-header {
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: var.$color-white;
+}
+.main-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+.main-header__start {
+    display: flex;
+    align-items: center;
+}
+.main-header__menu {
+    width: 40px;
+    height: 40px;
+}
+.main-header__menu--btn {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: transparent;
+    cursor: pointer;
+    svg {
+        fill: var.$color-dark;
+    }
+}
+
+.main-header__logo {
+    position: relative;
+    width: 120px;
+    height: 56px;
+}
+
+.main-header__link {
+    position: relative;
+    display: inline-block;
+    padding: 18px 16px;
+}
+.main-header__lang {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: var.$color-dark;
+    font-size: 14px;
+    font-weight: 400;
+}
+.main-header__center {
+    display: flex;
+    align-items: center;
+    flex: 0 1 728px;
+    min-width: 0;
+}
+.main-header__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    margin-left: 40px;
+    box-shadow: inset 0 0 1px 1px #f3f3f3;
+    background: var.$color-white;
+}
+.main-header__input-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-right: 1.5px solid #cccccc;
+    background: transparent;
+    padding: 0 5px;
+    input {
+        width: 100%;
+        height: 100%;
+        padding-right: 40px;
+        border: none;
+        outline: 0;
+        background: transparent;
+        font-size: 15px;
+        color: #666;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+}
+.main-header__hidden{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    pointer-events: none;
+    top: -1px;
+    margin-left: -43px;
+    width: calc(100% + 40px);
+    height: calc(100% + 1.5px);
+    border: 1.5px solid blue;
+    box-shadow: inset 0 0 2px 1px #cccccc;
+    visibility: visible;
+    opacity: 0;
+    padding: 0 10px;
+    svg {
+        fill: #444;
+        opacity: .8;
+        &:last-child {
+            pointer-events: visible;
+            cursor: pointer;
+            visibility: hidden;
+            opacity: 0;
+            
+        }
+    }
+}
+.main-header__btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 18px;
+    background: #f8f8f8;
+    box-shadow: inset 0 0 1px 1px #cccccc;
+    transition: all .5s ease; 
+    &:hover {
+        background: darken(var.$color-light, 2%);
+        box-shadow: inset 0 0 1px 1px #cccccc, 0 1px 1px #cccccc;
+        cursor: pointer;
+    }
+    svg {
+        fill: #444;
+        opacity: .8;
+    }
+}
+.main-header__vois {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: var.$color-light;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.main-header__end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header__end-itmes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-header__end-itme {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin: 0 10px;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.main-header__end-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    cursor: pointer;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.main-header__end-user {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-left: 20px;
+    background: aqua;
+    border-radius: 50%;
+    cursor: pointer;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
