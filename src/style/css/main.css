@@ -322,6 +322,13 @@ button {
   opacity: 0;
 }
 
+.main-header__clear-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
 .main-header__btn {
   position: relative;
   display: flex;
@@ -448,6 +455,69 @@ button {
 
   .main-header__small-search {
     display: flex;
+  }
+}
+@media (max-width: 575.98px) {
+  .main-header__menu {
+    display: none;
+  }
+
+  .main-header__link {
+    padding-left: 5px;
+  }
+
+  .main-header__strt-pointer {
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+  }
+
+  .main-header__form {
+    height: 25px;
+    border: none;
+    box-shadow: none !important;
+    margin-left: 10px;
+  }
+
+  .main-header__input {
+    box-shadow: none;
+    padding-right: 0 !important;
+  }
+
+  .main-header__input-box {
+    border: none;
+    border-bottom: 2px solid #333;
+    box-shadow: none;
+  }
+
+  .main-header__hidden {
+    display: none;
+  }
+
+  .main-header__btn {
+    height: 25px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .main-header__btn:hover {
+    box-shadow: none;
+    background: none;
+  }
+
+  .main-header__vois {
+    display: none;
+  }
+
+  .main-header__end-itmes {
+    display: none;
+  }
+
+  .main-header__end-user {
+    margin-left: 5px;
   }
 }
 .d-flex {
