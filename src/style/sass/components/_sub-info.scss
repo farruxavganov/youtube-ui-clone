@@ -1,15 +1,37 @@
-.sub-info {
+.sub-info::before,
+.sub-info::after {
+    --scale: 0;
+    --border: 10px;
     position: absolute;
-    white-space: nowrap;
-    background: #05050573;
-    padding: 10px;
-    border-radius: 5px;
-    flex-shrink: 0;
-    color: #ffff;
-    top: 150%;
-    right: -50%;
+    bottom: -40px;
+    left: 50%;
+    width: max-content;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: .3s ease;
     visibility: hidden;
     opacity: 0;
-    width: 0;
-    height: 0;
+}
+.sub-info::before {
+    --translate-y: 100%;
+    content: attr(data-toolTip);
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    transform-origin: bottom center;
+    background: var(--color);
+    color: white;
+}
+.sub-info::after {
+    content: '';
+    border: var(--border) solid transparent;
+    border-bottom-color: var(--color);
+    transform-origin: top center;
+    
+}
+.sub-info:hover::before,
+.sub-info:hover::after {
+    --scale: 1;
+    --color: #333;
+    visibility: visible;
+    opacity: 1;
 }

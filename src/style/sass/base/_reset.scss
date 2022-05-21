@@ -18,7 +18,8 @@ body {
     font-weight: 500;
     font-style: normal;
     background: var.$color-light;
-    overflow-x: hidden
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 button {
     border: none;
@@ -27,11 +28,5 @@ button {
     transition: .3 ease;
     &:focus {
         outline: none;
-    }
-    &:hover > .sub-info {
-        visibility: visible;
-        opacity: 1;
-        width: auto;
-        height: auto;
     }
 }

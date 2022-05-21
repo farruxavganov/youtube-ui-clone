@@ -1,0 +1,20 @@
+//X-samll
+@mixin x-small {
+    @media (max-width: 575.98px) { @content; }
+}
+//samll
+@mixin small {
+    @media (max-width: 767.98px) { @content; }
+}
+//medium
+@mixin medium {
+    @media (max-width: 991.98px) { @content; }
+}
+//large
+@mixin large {
+    @media (max-width: 1199.98px) { @conten; }
+}
+//x-large
+@mixin x-larde {
+    @media (max-width: 1399.98px) { @content; }
+}
