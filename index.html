@@ -111,10 +111,12 @@
                     </ul>
                 </nav>
                 <div class="saidbar__wrapper">
-                    <nav class="navbar">
-                        <ul class="navbar__itmes">
+                    <div class="navbar-wrapper">
+                        <nav class="navbar">
+                            <div class="navbar-container">
+                            <ul class="navbar__itmes">
                             <li class="navbar__itme">
-                                <a href="#" class="navbar__link">
+                                <a href="#" class="navbar__link active">
                                     <i class="material-icons">home</i>
                                     <small>Asosiy</small>
                                 </a>
@@ -137,8 +139,9 @@
                                     <small>Obunalar</small>
                                 </a>
                             </li>
-                        </ul>
-                        <ul class="navbar__itmes">
+                            </ul>
+                            <hr>
+                            <ul class="navbar__itmes">
                             <li class="navbar__itme">
                                 <a href="#" class="navbar__link">
                                     <i class="material-icons">video_library</i>
@@ -176,15 +179,45 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="users-list navbar__users">
+                            <hr>
+                            <div class="users-list navbar__users">
                             <h3 class="navbar__title">Obunalar</h3>
+                            <div class="users-list--wrapper">
                             <ul class="users-list__wrapper navbar__itmes">
                                 <li class="users-list__itme navbar__itme">
                                     <a href="#" class="users-list__link navbar__link">
                                         <div class="users-list__img">
                                             <img src="src/img/IMG_0183.jpg" alt="user image">
                                         </div>
-                                        <small>Shahzoda matjonova</small>
+                                        <small>Asal shodiyeva</small>
+                                        <span class="indecatar"></span>
+                                    </a>
+                                </li>
+                                <li class="users-list__itme navbar__itme">
+                                    <a href="#" class="users-list__link navbar__link">
+                                        <div class="users-list__img">
+                                            <img src="src/img/IMG_0183.jpg" alt="user image">
+                                        </div>
+                                        <small>Asal shodiyeva</small>
+                                        <span class="indecatar"></span>
+                                    </a>
+                                </li>
+                                <li class="users-list__itme navbar__itme">
+                                    <a href="#" class="users-list__link navbar__link">
+                                        <div class="users-list__img">
+                                            <img src="src/img/IMG_0183.jpg" alt="user image">
+                                        </div>
+                                        <small>Asal shodiyeva</small>
+                                        <span class="indecatar"></span>
+                                    </a>
+                                </li>
+                                <li class="users-list__itme navbar__itme">
+                                    <a href="#" class="users-list__link navbar__link">
+                                        <div class="users-list__img">
+                                            <img src="src/img/IMG_0183.jpg" alt="user image">
+                                        </div>
+                                        <small>Asal shodiyeva</small>
+                                        <span class="indecatar"></span>
                                     </a>
                                 </li>
                                 <li class="users-list__itme navbar__itme">
@@ -193,6 +226,25 @@
                                             <img src="src/img/IMG_0183.jpg" alt="user image">
                                         </div>
                                         <small>Shahzoda matjonova</small>
+                                        <span class="indecatar"></span>
+                                    </a>
+                                </li>
+                                <li class="users-list__itme navbar__itme">
+                                    <a href="#" class="users-list__link navbar__link">
+                                        <div class="users-list__img">
+                                            <img src="src/img/IMG_0183.jpg" alt="user image">
+                                        </div>
+                                        <small>Shahzoda matjonova</small>
+                                        <span class="indecatar"></span>
+                                    </a>
+                                </li>
+                                <li class="users-list__itme navbar__itme">
+                                    <a href="#" class="users-list__link navbar__link">
+                                        <div class="users-list__img">
+                                            <img src="src/img/IMG_0183.jpg" alt="user image">
+                                        </div>
+                                        <small>Shahzoda matjonova</small>
+                                        <span class="indecatar"></span>
                                     </a>
                                 </li>
                                 <li class="users-list__itme navbar__itme">
@@ -209,22 +261,7 @@
                                             <img src="src/img/IMG_0183.jpg" alt="user image">
                                         </div>
                                         <small>Shahzoda matjonova</small>
-                                    </a>
-                                </li>
-                                <li class="users-list__itme navbar__itme">
-                                    <a href="#" class="users-list__link navbar__link">
-                                        <div class="users-list__img">
-                                            <img src="src/img/IMG_0183.jpg" alt="user image">
-                                        </div>
-                                        <small>Shahzoda matjonova</small>
-                                    </a>
-                                </li>
-                                <li class="users-list__itme navbar__itme">
-                                    <a href="#" class="users-list__link navbar__link">
-                                        <div class="users-list__img">
-                                            <img src="src/img/IMG_0183.jpg" alt="user image">
-                                        </div>
-                                        <small>Shahzoda matjonova</small>
+                                        <span class="indecatar"></span>
                                     </a>
                                 </li>
                             </ul>
@@ -232,19 +269,22 @@
                                 <i class="material-icons">add_circle</i>
                                 <small>Kanallar katakogi</small>
                             </button>
+                            </div>
                             <button type="button" class="users-list__btn navbar__itme">
                                 <i class="material-icons">expand_more</i>
-                                <small>Yana(16)ta</small>
+                                <small>Yana (16) ta</small>
+<!--                                Expand Less-->
                             </button>
                         </div>
-                        <div class="yt-services navbar__yt-services">
+                            <hr>
+                            <div class="yt-services navbar__yt-services">
                             <h3 class="navbar__title">
                                 Youtube xizmatlari
                             </h3>
                             <ul class="yt-services__itmes navbar__itmes">
                                 <li class="yt-services__itme navbar__itme">
                                     <a href="#" class="yt-services__link navbar__link">
-                                        <i class="material-icons">stadia_controller</i>
+                                        <i class="material-icons">sports_esports</i>
                                         <small>Ganing</small>
                                     </a>
                                 </li>
@@ -261,6 +301,7 @@
                                     </a>
                                 </li>
                             </ul>
+                                <hr>
                             <ul class="yt-services__itmes navbar__itmes">
                                 <li class="yt-services__itme navbar__itme">
                                     <a href="#" class="yt-services__link navbar__link">
@@ -287,6 +328,7 @@
                                     </a>
                                 </li>
                             </ul>
+                                <hr>
                             <div class="navbar__footer">
                                 <div class="navbar__footer-linls-ul">
                                     <a href="#" class="navbar__footer-link-ul">Kanal haqida</a>
@@ -309,9 +351,13 @@
                                     2022 Google LLC</p>
                             </div>
                         </div>
-                    </nav>
+                        </div>
+                        </nav>
+                    </div>
+                    <div class="navbar-shadow"></div>
                 </div>
             </aside>
+            <main style="width: 100%">salom</main>
         </section>
         <script src="src/js/app.js"></script>
 	</body>

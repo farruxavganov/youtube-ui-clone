@@ -1,5 +1,5 @@
 const mainHeadrStart = document.querySelector(".main-header__start");
-const body = document.querySelector("body");
+const mentBtn = document.querySelector('.main-header__menu--btn');
 const mainHeaderStrtPointer = document.querySelector(".main-header__strt-pointer");
 const form = document.querySelector(".main-header__form");
 const inputBox = document.querySelector(".main-header__input-box");
@@ -10,7 +10,13 @@ const smallSearch = document.querySelector(".main-header__small-search");
 const svgs = hidden.querySelectorAll("svg");
 const mainHeaderEnd = document.querySelector(".main-header__end");
 
+const saidbar = document.querySelector(".saidbar");
 const navbarMediumItme = document.querySelectorAll(".navbar-medium__itme");
+const navbarMedium = document.querySelector(".navbar-medium");
+const navbarWrapper = document.querySelector(".navbar-wrapper");
+const saidbarWrapper = document.querySelector(".saidbar__wrapper");
+const navbarShadow = document.querySelector(".navbar-shadow");
+let toggle = false;
 
 window.onresize = resizeControl;
 
@@ -131,3 +137,6 @@ function forActive (data) {
 	})
 }
 forActive(navbarMediumItme);
+
+
+

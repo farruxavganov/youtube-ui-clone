@@ -3,9 +3,18 @@
 
 .saidbar {
     width: 100%;
-    max-width: 72px;
+    min-width: 270px;
+    max-width: 270px;
     height: calc(100vh - 56px);
     background: var.$color-white;
+    overflow: hidden;
+}
+
+@include mix.large {
+    .saidbar {
+        max-width: 72px;
+        min-width: 0;
+    }
 }
 
 @include mix.small {
@@ -18,3 +27,4 @@
         height: 56px;
     }
 }
+
