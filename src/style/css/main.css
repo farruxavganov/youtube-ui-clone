@@ -518,10 +518,6 @@ button {
     margin-left: 5px;
   }
 }
-.saidbar__wrapper {
-  display: none;
-}
-
 .saidbar {
   width: 100%;
   max-width: 72px;

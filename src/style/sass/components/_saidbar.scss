@@ -1,8 +1,6 @@
 @use "../abstracts/varabiles" as var;
 @use "../abstracts/mixins" as mix;
-.saidbar__wrapper {
-    display: none;
-}
+
 .saidbar {
     width: 100%;
     max-width: 72px;
