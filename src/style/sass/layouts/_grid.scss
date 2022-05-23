@@ -7,3 +7,6 @@
 .d-none {
     display: none;
 }
+.vh-1 {
+    min-height: calc(100vh - 56px);
+}

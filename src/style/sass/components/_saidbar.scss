@@ -1,10 +1,22 @@
+@use "../abstracts/varabiles" as var;
+@use "../abstracts/mixins" as mix;
 .saidbar__wrapper {
     display: none;
 }
-svg {
-    width: 40px;
-    height: 40px;
+.saidbar {
+    width: 100%;
+    max-width: 72px;
+    height: calc(100vh - 56px);
+    background: var.$color-white;
 }
-img {
-    width: 40px;
+
+@include mix.small {
+    .saidbar {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-width: 100%;
+        height: 56px;
+    }
 }

@@ -1,0 +1,57 @@
+@use "../abstracts/varabiles" as var;
+@use "../abstracts/mixins" as mix;
+.navbar-medium {
+    width: 100%;
+    height: 100%;
+}
+.navbar-medium__itmes {
+    width: 100%;
+    height: 100%;
+}
+.navbar-medium__itme {
+    width: 100%;
+    height: 76px;
+    &:hover {
+        background: darken(var.$color-light,10%);
+    }
+    &.active i {
+        color: black;
+    }
+}
+.navbar-medium__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+    color: var.$color-dark;
+    i {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    small {
+        font-size: 10px;
+    }
+}
+
+@include mix.small {
+    .navbar-medium {
+        display: flex;
+        align-items: center;
+        min-width: 100%;
+        height: 100%;
+    }
+    .navbar-medium__itmes {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .navbar-medium__itme {
+        height: 100%;
+    }
+    .navbar-medium__link {
+        padding: 10px 0;
+        
+    }
+}
