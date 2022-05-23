@@ -569,10 +569,12 @@ button {
   color: #606060;
 }
 .navbar-medium__link i {
+  pointer-events: none;
   font-size: 22px;
   margin-bottom: 5px;
 }
 .navbar-medium__link small {
+  pointer-events: none;
   font-size: 10px;
 }
 

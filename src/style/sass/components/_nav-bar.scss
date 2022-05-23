@@ -26,10 +26,12 @@
     padding: 14px 0;
     color: var.$color-dark;
     i {
+        pointer-events: none;
         font-size: 22px;
         margin-bottom: 5px;
     }
     small {
+        pointer-events: none;
         font-size: 10px;
     }
 }

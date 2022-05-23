@@ -10,6 +10,8 @@ const smallSearch = document.querySelector(".main-header__small-search");
 const svgs = hidden.querySelectorAll("svg");
 const mainHeaderEnd = document.querySelector(".main-header__end");
 
+const navbarMediumItme = document.querySelectorAll(".navbar-medium__itme");
+
 window.onresize = resizeControl;
 
 input.addEventListener("focus",inputFocus);
@@ -35,6 +37,7 @@ input.addEventListener("input",isClearValue);
 smallSearch.addEventListener("click",addSearchBar);
 
 mainHeaderStrtPointer.addEventListener("click",removeSearchBar);
+
 
 function inputFocus () {
 	form.style.borderLeft = "none";
@@ -116,3 +119,15 @@ function resizeControl () {
 		form.style.boxShadow = "1.5px solid #cccccc";
 	}
 }
+
+function forActive (data) {
+	data.forEach(item => {
+		item.addEventListener("click", (e) => {
+			data.forEach(item => {
+				item.classList.remove("active");
+			})
+			e.target.parentElement.classList.add("active");
+		})
+	})
+}
+forActive(navbarMediumItme);
