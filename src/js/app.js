@@ -16,6 +16,9 @@ const navbarMedium = document.querySelector(".navbar-medium");
 const navbarWrapper = document.querySelector(".navbar-wrapper");
 const saidbarWrapper = document.querySelector(".saidbar__wrapper");
 const navbarShadow = document.querySelector(".navbar-shadow");
+
+const main = document.querySelector(".main");
+
 let toggle = false;
 
 window.onresize = resizeControl;
@@ -149,11 +152,13 @@ mentBtn.addEventListener("click", ()=>{
 
 			navbarWrapper.setAttribute("style", "display: none");
 			navbarMedium.setAttribute("style", "display: flex");
+			main.setAttribute("style", `width: calc(100% - 72px)`);
 		}else {
 			saidbar.removeAttribute("style");
 
 			navbarWrapper.removeAttribute("style");
 			navbarMedium.removeAttribute("style");
+			main.removeAttribute("style");
 		}
 
 		toggle1 = !toggle1;
@@ -219,6 +224,7 @@ window.onresize = ()=> {
 
 		saidbarWrapper.removeAttribute("style");
 		navbarShadow.removeAttribute("style");
+		main.removeAttribute("style");
 
 		toggle1 = false;
 	}

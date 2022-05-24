@@ -1,0 +1,17 @@
+@use "../abstracts/mixins" as mix;
+
+.main {
+    width: calc(100% - 270px);
+}
+
+@include mix.large {
+    .main {
+        width: calc(100% - 72px)
+    }
+}
+
+@include mix.small {
+    .main {
+        width: 100%;
+    }
+}

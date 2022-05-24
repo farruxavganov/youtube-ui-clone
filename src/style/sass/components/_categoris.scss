@@ -1,0 +1,48 @@
+@use "../abstracts/varabiles" as var;
+.categoris {
+    width: 100%;
+    max-width: 1400px;
+    height: 56px;
+    border: 1px solid #9999;
+    border-right: none;
+    border-left: none;
+    background-color: var.$color-white;
+    padding: 0 20px;
+    overflow: hidden;
+    &__itmes {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    &__itme {
+        margin: 0 10px;
+        flex-shrink: 0;
+    }
+    &__itme:last-child {
+        margin-right: 0;
+    }
+    &__itme:first-child {
+        margin-left: 0;
+    }
+    &__btn {
+        padding: 8px;
+        background-color: var.$color-light;
+        border: 1px solid #9999;
+        border-radius: 20px;
+        font-weight: 500;
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            border-color: #fff;
+        }
+        &.active {
+            background: #333;
+            color: #fff;
+        }
+    }
+}
