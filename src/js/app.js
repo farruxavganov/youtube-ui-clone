@@ -138,5 +138,89 @@ function forActive (data) {
 }
 forActive(navbarMediumItme);
 
+let toggle1 = false;
+let largeDev = toggle1;
+let meduimDev = toggle1;
 
+mentBtn.addEventListener("click", ()=>{
+	if(window.innerWidth >= 1200) {
+		if(!toggle1) {
+			saidbar.setAttribute("style", "max-width: 72px; min-width: 72px");
 
+			navbarWrapper.setAttribute("style", "display: none");
+			navbarMedium.setAttribute("style", "display: flex");
+		}else {
+			saidbar.removeAttribute("style");
+
+			navbarWrapper.removeAttribute("style");
+			navbarMedium.removeAttribute("style");
+		}
+
+		toggle1 = !toggle1;
+		largeDev = toggle1;
+	} else if(window.innerWidth >= 768 && window.innerWidth < 1200) {
+		if(!toggle1) {
+			saidbarWrapper.setAttribute("style", "visibility: visible; width: 100%");
+			navbarWrapper.setAttribute("style", "width: 270px");
+			navbarMedium.setAttribute("style", "visibility: hidden");
+			navbarShadow.setAttribute("style", "display: block; width: 100%");
+		}else {
+			saidbarWrapper.removeAttribute("style");
+			navbarWrapper.removeAttribute("style");
+			navbarMedium.removeAttribute("style");
+			navbarShadow.removeAttribute("style");
+		}
+
+		toggle1 = !toggle1;
+		meduimDev = toggle1;
+	}
+
+})
+
+window.onresize = ()=> {
+	saidbar.removeAttribute("style");
+
+	navbarWrapper.removeAttribute("style");
+	navbarMedium.removeAttribute("style");
+
+	saidbarWrapper.removeAttribute("style");
+	navbarShadow.removeAttribute("style");
+	if(window.innerWidth >= 1200){
+		if(largeDev) {
+			saidbar.setAttribute("style", "max-width: 72px; min-width: 72px");
+
+			navbarWrapper.setAttribute("style", "display: none");
+			navbarMedium.setAttribute("style", "display: flex");
+		}
+
+		toggle1 = largeDev;
+	}else if(window.innerWidth >= 768 && window.innerWidth < 1200){
+		if(meduimDev) {
+			saidbarWrapper.setAttribute("style", "visibility: visible; width: 100%");
+			navbarWrapper.setAttribute("style", "width: 270px");
+			navbarMedium.setAttribute("style", "visibility: hidden");
+			navbarShadow.setAttribute("style", "display: block; width: 100%");
+		}else {
+			saidbar.removeAttribute("style");
+
+			navbarWrapper.removeAttribute("style");
+			navbarMedium.removeAttribute("style");
+
+			saidbarWrapper.removeAttribute("style");
+			navbarShadow.removeAttribute("style");
+		}
+
+		toggle1 = meduimDev;
+	}else {
+		saidbar.removeAttribute("style");
+
+		navbarWrapper.removeAttribute("style");
+		navbarMedium.removeAttribute("style");
+
+		saidbarWrapper.removeAttribute("style");
+		navbarShadow.removeAttribute("style");
+
+		toggle1 = false;
+	}
+	
+}

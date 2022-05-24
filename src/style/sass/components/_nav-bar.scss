@@ -118,6 +118,7 @@
     height: 100vh;
     background: rgba(0,0,0,.4);
     pointer-events: auto;
+    transform: none;
 }
 .users-list--wrapper {
     width: 100%;
@@ -222,6 +223,7 @@
     }
     .navbar-shadow {
         display: block;
+        width: 0px;
     }
 }
 @include mix.small {
