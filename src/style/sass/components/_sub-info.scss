@@ -10,6 +10,7 @@
     transition: .3s ease;
     visibility: hidden;
     opacity: 0;
+    z-index: 5;
 }
 .sub-info::before {
     --translate-y: 100%;

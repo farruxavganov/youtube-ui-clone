@@ -178,6 +178,7 @@ button {
   transition: 0.3s ease;
   visibility: hidden;
   opacity: 0;
+  z-index: 5;
 }
 
 .sub-info::before {
@@ -854,6 +855,7 @@ button {
   overflow: hidden;
 }
 .categoris__itmes {
+  transition: all 200ms ease;
   position: relative;
   display: flex;
   justify-content: flex-start;
