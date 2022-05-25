@@ -245,16 +245,24 @@ let containerElementLeft = categorisContainer.getBoundingClientRect().left;
 
 categorisControlBtnLeft.addEventListener("click", ()=>{
 	let elementRight = categorisItme[categorisItme.length - 1]?.getBoundingClientRect().right;
-	if(elementRight <= containerElementRight || categorisItme.length == 0) return;
-	data += categorisItme[count].getBoundingClientRect().width;
-	categorisItmes.style.transform = `translateX(-${data}px)`;
+	if(elementRight <= containerElementRight || categorisItme.length == 0) {
+		categorisControlBtnLeft.style.display = "none";
+		return;
+	}
+	data += categorisItme[count]?.getBoundingClientRect().width;
+	categorisItmes.style.left = `-${data}px`;
 	count++;
+	categorisControlBtnRight.style.display = "block";
 })
 
 categorisControlBtnRight.addEventListener("click", ()=>{
 	let elementLefft = categorisItme[0]?.getBoundingClientRect().left;
-	if(elementLefft >= containerElementLeft || categorisItme.length == 0) return;
+	if(elementLefft >= containerElementLeft || categorisItme.length == 0) {
+		categorisControlBtnRight.style.display = "none";
+		return;
+	}
 	count--;
-	data -= categorisItme[count].getBoundingClientRect().width;
-	categorisItmes.style.transform = `translateX(-${data}px)`;
+	data -= categorisItme[count]?.getBoundingClientRect().width;
+	categorisItmes.style.left = `-${data}px`;
+	categorisControlBtnLeft.style.display = "block";
 })

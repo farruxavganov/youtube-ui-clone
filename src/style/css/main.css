@@ -863,6 +863,7 @@ button {
   width: text-content;
   height: 100%;
   z-index: 0;
+  width: auto;
   white-space: nowrap;
 }
 .categoris__itme {
