@@ -855,10 +855,9 @@ button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: text-content;
   height: 100%;
   white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
 }
 .categoris__itme {
   margin: 0 10px;
@@ -887,6 +886,26 @@ button {
   background: #333;
   color: #fff;
 }
+.categoris__control-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.categoris__control-btn:hover {
+  cursor: pointer;
+}
+.categoris__control-btn:active {
+  opacity: 0.6;
+}
+.categoris__control-btn-left {
+  left: 0;
+}
+.categoris__control-btn-right {
+  right: 0;
+}
 
 .d-flex {
   display: flex;
@@ -909,10 +928,13 @@ button {
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 1400px;
   margin: auto;
+  padding: 0 20px;
   height: 100%;
+  overflow: hidden;
 }
 
 .main {

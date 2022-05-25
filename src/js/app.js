@@ -18,6 +18,12 @@ const saidbarWrapper = document.querySelector(".saidbar__wrapper");
 const navbarShadow = document.querySelector(".navbar-shadow");
 
 const main = document.querySelector(".main");
+const categorisContainer = document.querySelector(".categoris__container");
+const categorisItmes = document.querySelector(".categoris__itmes");
+const categorisItme = document.querySelectorAll(".categoris__itme");
+const categorisControlBtnLeft = document.querySelector(".categoris__control-btn-left");
+const categorisControlBtnRight = document.querySelector(".categoris__control-btn-right");
+
 
 let toggle = false;
 
@@ -230,3 +236,25 @@ window.onresize = ()=> {
 	}
 	
 }
+let data = 0;
+let rightData = 0;
+let count = 0;
+
+let containerElementRight = categorisContainer.getBoundingClientRect().right;
+let containerElementLeft = categorisContainer.getBoundingClientRect().left;
+
+categorisControlBtnLeft.addEventListener("click", ()=>{
+	let elementRight = categorisItme[categorisItme.length - 1]?.getBoundingClientRect().right;
+	if(elementRight <= containerElementRight || categorisItme.length == 0) return;
+	data += categorisItme[count].getBoundingClientRect().width;
+	categorisItmes.style.transform = `translateX(-${data}px)`;
+	count++;
+})
+
+categorisControlBtnRight.addEventListener("click", ()=>{
+	let elementLefft = categorisItme[0]?.getBoundingClientRect().left;
+	if(elementLefft >= containerElementLeft || categorisItme.length == 0) return;
+	count--;
+	data -= categorisItme[count].getBoundingClientRect().width;
+	categorisItmes.style.transform = `translateX(-${data}px)`;
+})

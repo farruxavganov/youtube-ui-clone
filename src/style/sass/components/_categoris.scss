@@ -12,10 +12,9 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        width: text-content;
         height: 100%;
         white-space: nowrap;
-        max-width: 100%;
-        overflow: hidden;
     }
     &__itme {
         margin: 0 10px;
@@ -43,5 +42,25 @@
             background: #333;
             color: #fff;
         }
+    }
+    &__control-btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            opacity: .6;
+        }
+    }
+    &__control-btn-left {
+        left: 0;
+    }
+    &__control-btn-right {
+        right: 0;
     }
 }
