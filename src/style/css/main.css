@@ -843,7 +843,6 @@ button {
 }
 .categoris {
   width: 100%;
-  max-width: 1400px;
   height: 56px;
   border: 1px solid #9999;
   border-right: none;
@@ -912,6 +911,8 @@ button {
 .container {
   width: 100%;
   max-width: 1400px;
+  margin: auto;
+  height: 100%;
 }
 
 .main {
