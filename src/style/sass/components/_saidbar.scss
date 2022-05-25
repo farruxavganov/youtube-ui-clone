@@ -2,12 +2,14 @@
 @use "../abstracts/mixins" as mix;
 
 .saidbar {
+    position: relative;
     width: 100%;
     min-width: 270px;
     max-width: 270px;
     height: calc(100vh - 56px);
     background: var.$color-white;
     overflow: hidden;
+    z-index: 5;
 }
 
 @include mix.large {

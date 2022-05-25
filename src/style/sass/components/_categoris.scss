@@ -9,11 +9,13 @@
     padding: 0 20px;
     overflow: hidden;
     &__itmes {
+        position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         width: text-content;
         height: 100%;
+        z-index: 0;
         white-space: nowrap;
     }
     &__itme {
@@ -44,7 +46,6 @@
         }
     }
     &__control-btn {
-        display: none;
         align-items: center;
         position: absolute;
         top: 50%;
