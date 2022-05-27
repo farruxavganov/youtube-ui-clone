@@ -1,4 +1,5 @@
 @use "../abstracts/varabiles" as var; 
+@use "../abstracts/mixins" as mix;
 .card {
      width: 100%;
      height: auto;
@@ -43,7 +44,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 160px;
+            height: 100%;
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
             object-fit: cover;
@@ -121,6 +122,7 @@
      }
      &__video-infos {
          display: flex;
+         flex-wrap: wrap;
          margin-top: 3px;
      }
      &__data {
@@ -141,8 +143,8 @@
          border-radius: 50%;
          background-color: #333;
      }
-     &__data--ago {
-         margin-left: 8px;
+     &__data--view {
+         margin-right: 8px;
      }
      &__dots {
          position: absolute;
@@ -194,3 +196,8 @@
     }
  }
  
+@include mix.x-small {
+    .card__img {
+        height: 200px;
+    }
+}

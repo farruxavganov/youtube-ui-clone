@@ -1,8 +1,10 @@
+@use "../abstracts/mixins" as mix;
 .contents {
     width: 100%;
     padding: 20px;
     &__items {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         margin: 25px 0;
     }
@@ -10,7 +12,23 @@
         margin-top: 0;
     }
     &__item {
-        width: calc(100%/4);
+        width: calc(100% / 4);
         padding: 5px;
+    }
+}
+
+@include mix.medium {
+    .contents__item {
+        width: 50%;
+        margin-top: 25px;
+    }
+    .contents__item:nth-child(1),
+    .contents__item:nth-child(2) {
+        margin-top: 0;
+    }
+}
+@include mix.x-small {
+    .contents__item {
+        width: 100%;
     }
 }
