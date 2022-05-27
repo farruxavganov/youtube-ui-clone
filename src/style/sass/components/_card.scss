@@ -1,0 +1,196 @@
+@use "../abstracts/varabiles" as var; 
+.card {
+     width: 100%;
+     height: auto;
+     cursor: pointer;
+     &.active {
+         transition: transform .5s ease;
+         border-radius: 5px;
+         transform: scaleY(1.2) scaleX(1.2);
+         cursor: pointer;
+         background: #fff;
+         box-shadow: 0 0 2px 0px #333;
+         position: relative;
+         z-index: 10;
+     }
+     &.active &__body {
+         padding: 8px;
+         padding-top: 0;
+     }
+     &.active &__dots {
+         right: 8px;
+     }
+    &.active &__btns {
+        display: block;
+    }
+     &:hover &__dots {
+         display: inline-block;
+     }
+     
+     &__head {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 160px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 160px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            object-fit: cover;
+            object-position: left top;
+        }
+        span {
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+            padding: 3px;
+            color: #fff;
+            background: black;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 400;
+            
+        }
+    }
+     &__link {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+     }
+     &__link::before {
+         display: none;
+         position: absolute;
+         right: 2px;
+         bottom: 2px;
+         content: attr(data-show);
+         background: black;
+         color: #fff;
+         padding: 3px;
+         border-radius: 2px;
+         width: text-content;
+         font-size: 13px;
+         font-weight: 400;
+//         z-index: 55;
+     }
+     &__head:hover &__link::before {
+             display: block
+     }
+     &__body {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         margin-top: 10px;
+     }
+    &__wrapper {
+        display: flex;
+    }
+     &__user-img {
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         margin-right: 8px;
+         img {
+             width: 100%;
+             object-fit: cover;
+             border-radius: 50%;
+         }
+     }
+     &__title {
+         color: black;
+         letter-spacing: .5px;
+     }
+     &__user-name {
+         display: block;
+         margin-top: 7px;
+         color: #333;
+         font-size: 14px;
+         font-weight: 400;
+         opacity: .7;
+     }
+     &__video-infos {
+         display: flex;
+         margin-top: 3px;
+     }
+     &__data {
+         position: relative;
+         color: #333;
+         opacity: .7;
+         font-size: 12px;
+         font-weight: 400px;
+     }
+     &__data--view::after {
+         position: absolute;
+         content: "";
+         top: 50%;
+         right: -8px;
+         transform: translateY(-50%);
+         width: 5px;
+         height: 5px;
+         border-radius: 50%;
+         background-color: #333;
+     }
+     &__data--ago {
+         margin-left: 8px;
+     }
+     &__dots {
+         position: absolute;
+         top: 5px;
+         right: 0;
+         display: none;
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         background-color: #333;
+         &::before,
+         &::after {
+             position: absolute;
+             content: "";
+             width: 4px;
+             height: 4px;
+             border-radius: 50%;
+             background-color: #333;
+         }
+         &::before {
+             top: -6px;
+         }
+         &::after {
+             bottom: -6px;
+         }
+     }
+     &__btns {
+         display: none;
+         width: 100%;
+         margin-top: 20px;
+     }
+     &__btn {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         background: var.$color-light;
+         padding: 5px;
+         color: #999;
+         i {
+             margin-right: 5px;
+         }
+         &:hover {
+             cursor: pointer;
+         }
+     }
+    &__btn:first-child {
+        margin-bottom: 5px;
+    }
+ }
+ 
