@@ -2,7 +2,9 @@
 @use "../abstracts/mixins" as mix;
 
 .saidbar {
-    position: relative;
+    position: sticky;
+    top: 56px;
+    left: 0;
     width: 100%;
     min-width: 270px;
     max-width: 270px;
@@ -22,11 +24,13 @@
 @include mix.small {
     .saidbar {
         position: fixed;
+        top: auto;
         left: 0;
         bottom: 0;
         width: 100%;
         min-width: 100%;
         height: 56px;
+        z-index: 55;
     }
 }
 

@@ -208,11 +208,15 @@ button {
 }
 
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   width: 100%;
   height: 56px;
   background-color: #ffffff;
+  z-index: 555;
 }
 
 .main-header__container {
@@ -540,7 +544,9 @@ button {
   }
 }
 .saidbar {
-  position: relative;
+  position: sticky;
+  top: 56px;
+  left: 0;
   width: 100%;
   min-width: 270px;
   max-width: 270px;
@@ -559,11 +565,13 @@ button {
 @media (max-width: 767.98px) {
   .saidbar {
     position: fixed;
+    top: auto;
     left: 0;
     bottom: 0;
     width: 100%;
     min-width: 100%;
     height: 56px;
+    z-index: 55;
   }
 }
 .navbar-medium {
@@ -845,6 +853,8 @@ button {
   }
 }
 .categoris {
+  position: sticky;
+  top: 56px;
   width: 100%;
   height: 56px;
   border: 1px solid #9999;
@@ -853,6 +863,7 @@ button {
   background-color: #ffffff;
   padding: 0 20px;
   overflow: hidden;
+  z-index: 55;
 }
 .categoris__itmes {
   transition: all 200ms ease;
@@ -1020,16 +1031,29 @@ button {
   border-radius: 50%;
 }
 .card__title {
+  display: block;
   color: black;
   letter-spacing: 0.5px;
 }
 .card__user-name {
-  display: block;
+  position: relative;
+  display: inline-block;
   margin-top: 7px;
   color: #333;
   font-size: 14px;
   font-weight: 400;
   opacity: 0.7;
+}
+.card__user-name:hover::before {
+  position: absolute;
+  top: 0;
+  left: 110%;
+  content: attr(data-name);
+  min-width: max-content;
+  padding: 3px;
+  border-radius: 3px;
+  background: black;
+  color: #fff;
 }
 .card__video-infos {
   display: flex;
@@ -1147,6 +1171,7 @@ button {
 }
 
 .main {
+  margin-top: 56px;
   width: calc(100% - 270px);
 }
 

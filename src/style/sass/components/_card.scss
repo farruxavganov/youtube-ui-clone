@@ -109,16 +109,29 @@
          }
      }
      &__title {
+         display: block;
          color: black;
          letter-spacing: .5px;
      }
      &__user-name {
-         display: block;
+         position: relative;
+         display: inline-block;
          margin-top: 7px;
          color: #333;
          font-size: 14px;
          font-weight: 400;
          opacity: .7;
+     }
+     &__user-name:hover::before {
+         position: absolute;
+         top: 0;
+         left: 110%;
+         content: attr(data-name);
+         min-width: max-content;
+         padding: 3px;
+         border-radius: 3px;
+         background: black;
+         color: #fff;
      }
      &__video-infos {
          display: flex;

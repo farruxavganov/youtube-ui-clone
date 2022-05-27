@@ -1,5 +1,7 @@
 @use "../abstracts/varabiles" as var;
 .categoris {
+    position: sticky;
+    top: 56px;
     width: 100%;
     height: 56px;
     border: 1px solid #9999;
@@ -8,6 +10,7 @@
     background-color: var.$color-white;
     padding: 0 20px;
     overflow: hidden;
+    z-index: 55;
     &__itmes {
         transition: all 200ms ease;
         position: relative;
