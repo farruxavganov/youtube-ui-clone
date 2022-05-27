@@ -196,6 +196,11 @@ window.onresize = ()=> {
 
 	saidbarWrapper.removeAttribute("style");
 	navbarShadow.removeAttribute("style");
+
+	categorisControlBtnLeft.style.display = "block";
+	categorisControlBtnRight.style.display = "block";
+	categorisItmes.style.left = "0px";
+
 	if(window.innerWidth >= 1200){
 		if(largeDev) {
 			saidbar.setAttribute("style", "max-width: 72px; min-width: 72px");
@@ -240,10 +245,11 @@ let data = 0;
 let rightData = 0;
 let count = 0;
 
-let containerElementRight = categorisContainer.getBoundingClientRect().right;
-let containerElementLeft = categorisContainer.getBoundingClientRect().left;
+let containerElementRight;
+let containerElementLeft;
 
 categorisControlBtnLeft.addEventListener("click", ()=>{
+	containerElementRight = categorisContainer.getBoundingClientRect().right;
 	let elementRight = categorisItme[categorisItme.length - 1]?.getBoundingClientRect().right;
 	if(elementRight <= containerElementRight || categorisItme.length == 0) {
 		categorisControlBtnLeft.style.display = "none";
@@ -256,6 +262,7 @@ categorisControlBtnLeft.addEventListener("click", ()=>{
 })
 
 categorisControlBtnRight.addEventListener("click", ()=>{
+	containerElementLeft = categorisContainer.getBoundingClientRect().left;
 	let elementLefft = categorisItme[0]?.getBoundingClientRect().left;
 	if(elementLefft >= containerElementLeft || categorisItme.length == 0) {
 		categorisControlBtnRight.style.display = "none";
