@@ -24,6 +24,9 @@ const categorisItme = document.querySelectorAll(".categoris__itme");
 const categorisControlBtnLeft = document.querySelector(".categoris__control-btn-left");
 const categorisControlBtnRight = document.querySelector(".categoris__control-btn-right");
 
+const contentsItems = document.querySelectorAll(".contents__items");
+const contentsContainer = document.querySelector(".contents-container");
+
 
 let toggle = false;
 
