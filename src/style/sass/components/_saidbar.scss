@@ -8,11 +8,12 @@
     width: 100%;
     min-width: 270px;
     max-width: 270px;
-    height: calc(100vh - 56px);
+    height: 100vh;
     background: var.$color-white;
     overflow: hidden;
-    z-index: 5;
+    z-index: 999;
 }
+
 
 @include mix.large {
     .saidbar {

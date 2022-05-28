@@ -28,7 +28,14 @@
     }
 }
 @include mix.x-small {
+    .contents__item:last-child {
+        margin-bottom: 25px;
+    }
     .contents__item {
         width: 100%;
     }
+    .contents__item:nth-child(2) {
+        margin-top: 25px;
+    }
+    
 }

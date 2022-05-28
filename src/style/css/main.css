@@ -550,10 +550,10 @@ button {
   width: 100%;
   min-width: 270px;
   max-width: 270px;
-  height: calc(100vh - 56px);
+  height: 100vh;
   background: #ffffff;
   overflow: hidden;
-  z-index: 5;
+  z-index: 999;
 }
 
 @media (max-width: 1199.98px) {
@@ -615,6 +615,8 @@ button {
 }
 
 .saidbar__wrapper {
+  position: relative;
+  top: -56px;
   width: 270px;
   height: 100%;
   overflow: hidden;
@@ -639,10 +641,10 @@ button {
 
 .navbar {
   position: absolute;
-  top: 0;
+  top: 56px;
   left: 0;
   width: 100%;
-  max-height: calc(100vh - 56px);
+  max-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   background: #ffffff;
@@ -1215,8 +1217,16 @@ button {
   }
 }
 @media (max-width: 575.98px) {
+  .contents__item:last-child {
+    margin-bottom: 25px;
+  }
+
   .contents__item {
     width: 100%;
+  }
+
+  .contents__item:nth-child(2) {
+    margin-top: 25px;
   }
 }
 

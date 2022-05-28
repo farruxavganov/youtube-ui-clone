@@ -39,6 +39,8 @@
 
 //main saidbar
 .saidbar__wrapper {
+    position: relative;
+    top: -56px;
     width: 270px;
     height: 100%;
     overflow: hidden;
@@ -60,10 +62,10 @@
 }
 .navbar {
     position: absolute;
-    top: 0;
+    top: 56px;
     left: 0;
     width: 100%;
-    max-height: calc(100vh - 56px);
+    max-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     background: var.$color-white;
